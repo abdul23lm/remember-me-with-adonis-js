@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="box">
-  <h2 class="title">New Task</h2>
+  <h2 class="title">Remember Me App</h2>
 
   <form action="/tasks" method="POST">
     {{ csrfField() }}
@@ -34,7 +34,7 @@
       <table class="table is-bordered is-striped is-narrow is-fullwidth">
         <thead>
           <tr>
-            <th>SN</th>
+            <th>No</th>
             <th>Title</th>
             <th>Action</th>
           </tr>
@@ -49,7 +49,6 @@
                 {{ task.title }}
               </td>
               <td>
-                <button class="button is-danger is-outlined">
                 <form action="{{ 'tasks/' + task.id + '?_method=DELETE' }}" method="POST">
                   {{ csrfField() }}
 
@@ -60,9 +59,6 @@
                     </span>
                   </button>
                 </form>
-                  <span class="icon is-small">
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                  </span>
                 </button>
               </td>
             </tr>
