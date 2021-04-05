@@ -22,7 +22,11 @@
   </form>
 </div>
 
-
+@if(old('notification'))
+    <div class="notification is-success">
+        {{ old('notification') }}
+    </div>
+@endif
 
   <div class="box">
     <h1 class="title">Task List</h1>
