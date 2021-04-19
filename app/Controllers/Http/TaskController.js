@@ -20,12 +20,7 @@ async index ({ view }) {
   })
 
   // show error messages upon validation fail
-  if (validation.fails()) {
-    session.withErrors(validation.messages())
-            .flashAll()
 
-    return response.redirect('back')
-  }
 
   // persist to database
   const task = new Task()
